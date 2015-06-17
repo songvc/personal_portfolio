@@ -10,7 +10,6 @@
   }
 }
 
-
 .side{
   background: -webkit-linear-gradient(90deg, #517fa4 10%, #243949 90%); /* Chrome 10+, Saf5.1+ */
   background:    -moz-linear-gradient(90deg, #517fa4 10%, #243949 90%); /* FF3.6+ */
@@ -138,9 +137,25 @@ footer{
 	padding:5%;
 }
 
-.jumbotron{
-	text-align:center;
+#aboutme{
+	.jumbotron{
+		text-align:center;
+	}
 }
+
+#portfolio{
+	.btn{
+		color:black;
+		
+	}
+	.portfolio-content{
+		padding:5px;
+		.description{
+			height:80px;
+		}
+	}
+}
+
 
 
 // endinjector

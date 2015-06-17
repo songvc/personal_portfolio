@@ -26,25 +26,10 @@
         <!-- SIDEBAR MENU -->
         <div class="profile-usermenu">
           <ul class="nav">
-            <li class="active">
-              <a href="" ng-click="gotoAnchor('aboutme')">
-              <i class="glyphicon glyphicon-user"></i>
-              About Me </a>
-            </li>
-            <li>
-              <a href="" ng-click="gotoAnchor('portfolio')">
-              <i class="glyphicon glyphicon-folder-open"></i>
-              Portfolio </a>
-            </li>
-            <li>
-              <a href="" ng-click="gotoAnchor('contact')">
-              <i class="glyphicon glyphicon-envelope"></i>
-              Contact </a>
-            </li>
-            <li>
-              <a href="" ng-click="gotoAnchor('blog')">
-              <i class="glyphicon glyphicon-user"></i>
-              Blog </a>
+            <li ng-repeat="menu in menus">
+              <a href="" ng-click="gotoAnchor(menu.hash)">
+                <i class="glyphicon {{menu.icon}}"></i>   {{menu.name}}
+              </a>
             </li>
           </ul>
         </div>
@@ -84,51 +69,55 @@
         
         <section id="aboutme">
           <div class="page-header">
-            <h1>About Me</h1>
+            <h1>#ABOUT ME</h1>
           </div>
           <div class="jumbotron">
             <h2> HELLO, MY NAME IS VINCENT. </h2>
-            <p>? I am a passionate front-end developer / former investment banker.<br> ? I love to work with both numbers and colors.<br> ? I love to analyze and crunch numbers. <br>? I love to design, create, and build. <br> @ I currently live in San Jose, California.</p>
+            <p>_? I am a passionate front-end developer / former investment banker.<br> _? I love to work with both numbers and colors.<br> _? I love to analyze and crunch numbers. <br>_? I love to design, create, and build. <br> _@ I currently live in San Jose, California.</p>
           </div>
         </section>
        
-        <section id="portfolio">
+        <section id="portfolio" class="clearfix">
           <div class="page-header">
-            <h1>Portfolio</h1>
-          </div>    
-
-          <div class="row">
-            <div class="col-md-4">
-              <div class="thumbnail">
-                <img src="..." alt="...">
-                <div class="caption">
-                  <h3>Thumbnail label</h3>
-                  <p>...</p>
-                  <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                </div>
-              </div>
-            </div>
+            <h1>#PORTFOLIO</h1>
           </div>   
 
+          <div class="portfolio-content col-md-4" ng-repeat="work in works">
+            <div class="thumbnail">
+              <img ng-src="{{work.image}}" style="height:200px;weight:242;" class="img-rounded">
+              <div class="caption">
+                <h3>{{work.title}}</h3>
+                <p class="description">{{work.description}}</p>
+                <p>
+                  <a ng-href="{{work.website}}" class="btn btn-default" role="button"><i class="fa fa-file"></i></a> <a ng-href="{{work.github}}" class="btn btn-default" role="button"><i class="fa fa-github"></i></a>
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
        
-        <section id="contact">
+        <section id="contact" class="clearfix">
           <div class="page-header">
-            <h1>Contact</h1>
-          </div>             
+            <h1>#CONTACT</h1>
+          </div>      
+          <p>
+            You can tweet me @songvct <br>
+            You can see my linkedin @songvc <br>
+            You can see my current projects @songvc <br>
+            You can shoot me an email at songvc@gmail.com
+          </p>       
         </section>
 
         <section id="blog">
           <div class="page-header">
-            <h1>Blog</h1>
+            <h1>#BLOG</h1>
           </div>    
-          
+          <div class="profile-content">
+            Some user related content goes here...sdfd lore  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quidem architecto quasi, iusto neque sequi quibusdam cupiditate dolorum nobis animi. Eius enim eveniet optio aut animi, reiciendis blanditiis distinctio eligendi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit, nesciunt sunt dolorem voluptates maxime. Eaque deleniti cumque illum odio obcaecati voluptatum animi accusantium maxime, magnam, amet, aut inventore voluptatem.
+          </div>   
         </section>
 
-        <div class="profile-content">
-          Some user related content goes here...sdfd lore  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam quidem architecto quasi, iusto neque sequi quibusdam cupiditate dolorum nobis animi. Eius enim eveniet optio aut animi, reiciendis blanditiis distinctio eligendi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit, nesciunt sunt dolorem voluptates maxime. Eaque deleniti cumque illum odio obcaecati voluptatum animi accusantium maxime, magnam, amet, aut inventore voluptatem.
-        </div>   
-   
+
 
       </div>
 
