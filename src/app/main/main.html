@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" ng-controller="MainCtrl">
   <div class="row">
     <div class="side col-md-3">
       <div class="profile-sidebar">
@@ -26,29 +26,29 @@
         <!-- SIDEBAR MENU -->
         <div class="profile-usermenu">
           <ul class="nav">
-
             <li class="active">
-              <a href="#aboutme">
+              <a href="" ng-click="gotoAnchor('aboutme')">
               <i class="glyphicon glyphicon-user"></i>
               About Me </a>
             </li>
             <li>
-              <a href="#portfolio" target="_blank">
+              <a href="" ng-click="gotoAnchor('portfolio')">
               <i class="glyphicon glyphicon-folder-open"></i>
               Portfolio </a>
             </li>
             <li>
-              <a href="#contact">
+              <a href="" ng-click="gotoAnchor('contact')">
               <i class="glyphicon glyphicon-envelope"></i>
               Contact </a>
             </li>
             <li>
-              <a href="#blog">
+              <a href="" ng-click="gotoAnchor('blog')">
               <i class="glyphicon glyphicon-user"></i>
               Blog </a>
             </li>
           </ul>
         </div>
+
         <div class="icon">
           <ul>
             <li>

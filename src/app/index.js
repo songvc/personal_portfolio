@@ -10,5 +10,6 @@ angular.module('personalPortfolio', ['ngAnimate', 'ngCookies', 'ngSanitize', 'ng
       .otherwise({
         redirectTo: '/'
       });
+
   })
 ;
