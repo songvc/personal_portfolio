@@ -62,7 +62,9 @@
 
     <div class="main col-md-9">
       <div class="top col-md-12">
-        <img src="../assets/images/sf.jpeg" class="img-responsive">
+        <img src="../assets/images/sf.jpeg" class="img-responsive">  
+        <h1>Welcome to my website</h1>
+        <p>Photo by Rob Bye via Unsplash</p>
       </div>
 
       <div class="bottom col-md-12">
@@ -73,10 +75,16 @@
           </div>
           <div class="jumbotron">
             <h2> HELLO, MY NAME IS VINCENT. </h2>
-            <p>_? I am a passionate front-end developer / former investment banker.<br> _? I love to work with both numbers and colors.<br> _? I love to analyze and crunch numbers. <br>_? I love to design, create, and build. <br> _@ I currently live in San Jose, California.</p>
+            <p>? I am a passionate front-end developer / former investment banker.<br> ? I love to work with both numbers and colors.<br> ? I love to analyze and crunch numbers. <br>? I love to design, create, and build. <br> @ I currently live in San Jose, California.</p>
           </div>
+          <h2> Here are my technical skills:</h2>
+          <br>
+          <div class="col-xs-2 skillbox" ng-repeat="skill in skills">
+            <a href="" class="label">{{skill}}</a>
+          </div>
+          
         </section>
-       
+        
         <section id="portfolio" class="clearfix">
           <div class="page-header">
             <h1>#PORTFOLIO</h1>
@@ -89,7 +97,7 @@
                 <h3>{{work.title}}</h3>
                 <p class="description">{{work.description}}</p>
                 <p>
-                  <a ng-href="{{work.website}}" class="btn btn-default" role="button"><i class="fa fa-file"></i></a> <a ng-href="{{work.github}}" class="btn btn-default" role="button"><i class="fa fa-github"></i></a>
+                  <a ng-href="{{work.website}}" class="btn btn-default" role="button"><i class="fa fa-link"></i></a> <a ng-href="{{work.github}}" class="btn btn-default" role="button"><i class="fa fa-github"></i></a>
                 </p>
               </div>
             </div>
