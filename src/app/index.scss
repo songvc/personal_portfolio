@@ -1,6 +1,8 @@
 
 // injector
-@media (min-width: 768px) { 
+
+// Base Layout
+@media (min-width: 992px) { 
   .side{
   	position:fixed;
   	height:100%
@@ -19,7 +21,8 @@
 }
 
 
-/* Profile sidebar */
+// Side CSS
+
 .profile-userpic{
   text-align:center;
   img{
@@ -32,7 +35,7 @@
 
 .profile-usertitle {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10%;
 }
 
 .profile-usertitle-name {
@@ -44,7 +47,6 @@
 }
 
 .profile-usertitle-job {
-  text-transform: uppercase;
   color: #64B5F6;
   font-size: 12px;
   font-weight: 600;
@@ -54,7 +56,7 @@
 
 .profile-userbuttons {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 5%;
 
   	.btn{
   		background-color:rgba(255,255,255,.2);
@@ -72,7 +74,7 @@
 }
 
 .profile-usermenu {
-  margin-top: 70px;
+  margin-top: 25%;
 
   ul li{
 	  border-bottom: 1px solid #f0f4f7;
@@ -102,21 +104,12 @@
   }
 }
 
-.icon{
+.profile-icon{
 	text-align:center;
-	margin-top:60px;
-
-	ul{
-		list-style-type: none;
-
-		li{
-			display: inline;
-		}
-
-	}
-
+	margin-top:40%;
+	margin-bottom:5%;
 	a{		
-		margin-right: 50px;
+		margin: 0% 5%;
 		i{
 			color: white;
 			&:hover{
@@ -127,27 +120,31 @@
 	}
 }
 
-footer{
-	padding-top:10%;
+footer{	
 	color: white;
 	font-size: 8px;
 	text-align:center;
 }
 
+
+// Main Content 
+
 .top{
 	position: relative;
-
 	h1{
 		position: absolute;
-		left: 45px;
-		bottom:40px;
-		text-transform:uppercase;
+		left: 5%;
+		bottom:5%;
 		color:white;
-	}
 	
+		small{
+			color:white;
+		}
+	}
+
 	p{
 		position: absolute;	
-		right: 10px;
+		right: 1%;
 		bottom:0px;
 		color:white;
 		font-size:10px;
@@ -156,7 +153,6 @@ footer{
 
 .bottom{
 	padding:5%;
-
 }
 
 #aboutme{
