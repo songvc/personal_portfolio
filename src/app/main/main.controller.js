@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('personalPortfolio')
-  .controller('MainCtrl', function ($scope, $location, $anchorScroll) {
+  .controller('MainCtrl', function ($scope, $http, $location, $anchorScroll) {
+  		  		
   		$scope.menus = 
   		[
   			{
@@ -18,11 +19,6 @@ angular.module('personalPortfolio')
   				"name":"Contact",
   				"hash":"contact",
   				"icon": "glyphicon-envelope"
-  			},
-  			{
-  				"name":"Blog",
-  				"hash":"blog",
-  				"icon": "glyphicon-pencil"
   			}
 
   		];
