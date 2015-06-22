@@ -82,7 +82,6 @@ angular.module('personalPortfolio')
   		];
 
   		$scope.gotoAnchor = function(hashtag){
-  			console.log(hashtag);
 	        $location.hash(hashtag);
 	        $anchorScroll();
   		}
