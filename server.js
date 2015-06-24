@@ -2,11 +2,14 @@ var express = require('express');
 var app = express();
 var http = require('http');
 var httpServer = http.Server(app);
+var path = require('path');
 
-app.use(express.static(__dirname));
+var dist = path.join(__dirname,'/dist')
+
+app.use(express.static(dist));
 
 app.get('/', function(req, res){
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(dist + '/index.html');
 });
 
 var port = process.env.PORT || 3000
