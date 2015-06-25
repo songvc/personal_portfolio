@@ -2,14 +2,14 @@ var plan = require('flightplan');
 
 var appName = 'portfolio';
 var username = 'deploy';
-// var startFile = 'bin/www';
+var startFile = '/server.js';
 
 var tmpDir = appName+'-' + new Date().getTime();
 
 // configuration
 plan.target('staging', [
   {
-    host: '45.55.25.182',
+    host: 'graphbay.com',
     username: username,
     agent: process.env.SSH_AUTH_SOCK
   }
@@ -17,7 +17,7 @@ plan.target('staging', [
 
 plan.target('production', [
   {
-    host: '45.55.25.182',
+    host: 'graphbay.com',
     username: username,
     agent: process.env.SSH_AUTH_SOCK
   },
@@ -52,6 +52,6 @@ plan.remote(function(remote) {
 
   remote.log('Reload application');
   remote.sudo('ln -snf ~/' + tmpDir + ' ~/'+appName, {user: username});
-  remote.exec('forever stop ~/'+appName+'/server.js', {failsafe: true});
-  remote.exec('forever start ~/'+appName+'/server.js' );
+  remote.exec('forever stop ~/'+appName+ startFile, {failsafe: true});
+  remote.exec('forever start ~/'+appName+ startFile );
 });
