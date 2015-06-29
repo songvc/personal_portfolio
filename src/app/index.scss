@@ -1,17 +1,32 @@
 
 // injector
 
-// Base Layout
+// Basic Layout
 @media (min-width: 992px) { 
   .side{
   	position:fixed;
   	height:100%
   }
   .main{
-	margin-left:25%;
+		margin-left:25%;
   }
+
 }
 
+//Responsive Typograph
+p{
+	font-size:14px;
+}
+
+h1{
+	font-size: 5vmin;
+}
+
+h2{
+	font-size: 5vmin;
+}
+
+// Side CSS
 .side{
   background: -webkit-linear-gradient(90deg, #517fa4 10%, #243949 90%); /* Chrome 10+, Saf5.1+ */
   background:    -moz-linear-gradient(90deg, #517fa4 10%, #243949 90%); /* FF3.6+ */
@@ -20,8 +35,6 @@
   background:         linear-gradient(90deg, #517fa4 10%, #243949 90%); /* W3C */
 }
 
-
-// Side CSS
 
 .profile-userpic{
   text-align:center;
@@ -40,7 +53,6 @@
 
 .profile-usertitle-name {
   color: white;
-  font-size: 16px;
   font-weight: 600;
   margin-bottom: 7px;
 
@@ -48,8 +60,6 @@
 
 .profile-usertitle-job {
   color: #64B5F6;
-  font-size: 12px;
-  font-weight: 600;
   margin-bottom: 15px;
 
 }
@@ -61,11 +71,11 @@
   	.btn{
   		background-color:rgba(255,255,255,.2);
   		border:none;
-		text-transform: uppercase;
-		font-size: 11px;
-		font-weight: 600;
-		padding: 6px 15px;
-		margin-right: 5px;
+			text-transform: uppercase;
+			font-size: 1.3rem;
+			font-weight: 600;
+			padding: 6px 15px;
+			margin-right: 5px;
 		&:hover{
 	  		background-color:rgba(255,255,255,.4);
 		}
@@ -76,16 +86,18 @@
 .profile-usermenu {
   margin-top: 25%;
 
+
   ul li{
 	  border-bottom: 1px solid #f0f4f7;
-
+	
 		a{
 			color: white;
-			font-size: 14px;
+			font-size: 1.5rem;
 			font-weight: 400;
 
+
 			i{
-			  margin-right: 8px;
+			  margin-right: 5%;
 			  font-size: 14px;
 			}
 
@@ -122,7 +134,7 @@
 
 footer{	
 	color: white;
-	font-size: 8px;
+	font-size: 0.8rem;
 	text-align:center;
 }
 
@@ -136,7 +148,7 @@ footer{
 		left: 5%;
 		bottom:5%;
 		color:white;
-	
+
 		small{
 			color:white;
 		}
@@ -147,7 +159,7 @@ footer{
 		right: 1%;
 		bottom:0px;
 		color:white;
-		font-size:7px;
+		font-size:0.8rem;
 	}
 }
 
@@ -157,7 +169,8 @@ footer{
 
 #aboutme{
 	.jumbotron{
-		// text-align:center;
+		// text-align:center;	
+
 		p{
 			color: #7d878a;
 		}
@@ -165,10 +178,9 @@ footer{
 	.skillbox{
 		text-align:center;
 		background:#E4EDF4;
-		border: white 1.5px solid;
-		.label{
-			color:#3e6d8e;
-		}
+		border: white 1.5px solid;	
+		color:#3e6d8e;
+		
 	}
 	
 }
@@ -194,6 +206,7 @@ footer{
 		.description{
 			height:80px;
 		}
+
 	}
 }
 
